@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-    string addRE(string num1,int p1,string num2,int p2,int carry){
+    string addRE(string num1,int p1,string num2,int p2,int &carry){
         //base case
         if(p1<0 && p2<0){
             if(carry!=0)
