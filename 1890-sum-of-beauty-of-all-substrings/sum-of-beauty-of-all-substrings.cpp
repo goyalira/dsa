@@ -11,7 +11,7 @@ public:
 
                 int mini=INT_MAX;
                 int maxi=INT_MIN;
-                for(auto &each:mp){
+                for(auto each:mp){
                     mini=min(mini,each.second);
                     maxi=max(maxi,each.second);
                 }
