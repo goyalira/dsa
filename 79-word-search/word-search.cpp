@@ -3,7 +3,7 @@ public:
 bool solve(vector<vector<char>>& board, string word,int row,int col,int i){
     if(i==word.size())
     return true;
-    if(row<0||row>=board.size()||col<0||col>=board[0].size()||board[row][col]!=word[i]||board[row][col]=='%')
+    if(row<0||row>=board.size()||col<0||col>=board[0].size()||board[row][col]!=word[i])
     return false;
     char temp=board[row][col];
     board[row][col]='%';
