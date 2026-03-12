@@ -1,24 +1,16 @@
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        set<int> st;
-        vector<int> ans;
-
-        for(int i = 0; i < nums1.size(); i++){
-            for(int j = 0; j < nums2.size(); j++){
-                if(nums1[i] == nums2[j]){
-                    if(st.find(nums2[j]) == st.end()){
-                        st.insert(nums2[j]);
-                    }
-                }
-            }
+        set<int>s(nums1.begin(),nums1.end());
+        set<int>result;
+        for(int i=0;i<nums2.size();i++){
+            if(s.find(nums2[i])!=s.end())
+            result.insert(nums2[i]);
         }
-
-        // copy elements from set to vector
-        for(auto it : st){
-            ans.push_back(it);
-        }
-
+        vector<int>ans(result.begin(),result.end());
         return ans;
+        
+
+        
     }
 };
